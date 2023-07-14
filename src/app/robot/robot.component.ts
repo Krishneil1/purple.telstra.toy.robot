@@ -38,10 +38,10 @@ export class RobotComponent {
         this.move();
         break;
       case 'LEFT':
-        this.rotateLeft();
+        this.rotate();
         break;
       case 'RIGHT':
-        this.rotateRight();
+        this.rotate();
         break;
       case 'REPORT':
         this.report();
@@ -99,7 +99,7 @@ export class RobotComponent {
     }
   }
 
-  private rotateLeft() {
+  private rotate() {
     if (this.isPlaced) {
       switch (this.direction) {
         case Direction.NORTH:
@@ -118,24 +118,6 @@ export class RobotComponent {
     }
   }
 
-  private rotateRight() {
-    if (this.isPlaced) {
-      switch (this.direction) {
-        case Direction.NORTH:
-          this.direction = Direction.EAST;
-          break;
-        case Direction.SOUTH:
-          this.direction = Direction.WEST;
-          break;
-        case Direction.EAST:
-          this.direction = Direction.SOUTH;
-          break;
-        case Direction.WEST:
-          this.direction = Direction.NORTH;
-          break;
-      }
-    }
-  }
 
   private report() {
     if (this.isPlaced) {
