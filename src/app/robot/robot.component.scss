@@ -1,0 +1,97 @@
+.container {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.result {
+  margin-top: 2rem;
+  border: 0.1rem solid #ccc;
+  padding: 1rem;
+  width: 95%;
+}
+.commandText{
+  font-size: 1.6rem;
+}
+.commandInput{
+  margin-top: 1rem;
+}
+.command {
+  text-align: left;
+  width: 95%;
+  margin-left: 0.8rem;
+}
+
+
+.container {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  width: 40rem;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  color: #0c2340;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.label {
+  color: #0c2340;
+  font-size: 1.8rem;
+}
+
+.form-control {
+  width: 90%;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  border: 0.1rem solid #ced4da;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #0c2340;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.result {
+  color: #0c2340;
+  margin-top: 2rem;
+  border-radius: 0.3rem;
+}
+
+.subheading {
+  color: #0c2340;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.output {
+  color: #0c2340;
+  font-size: 1.6rem;
+  width: 95%;
+}
+.button-container {
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+.reset{
+  width: 95%;
+  margin-top: 1rem;
+}
+.execute{
+  width: 95%;
+}
+

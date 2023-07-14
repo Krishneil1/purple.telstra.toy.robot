@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Toy Robot Simulation</h2>
+  <div class="form-group">
+    <label class="commandText" for="commandInput">Enter command:</label>
+    <input type="text" class="form-control commandInput" [(ngModel)]="commandInput" autofocus>
+  </div>
+  <div class="button-container">
+    <button class="btn btn-primary execute" (click)="executeCommand()">Execute</button>
+    <button class="btn btn-danger reset" (click)="reset()">Reset</button>
+  </div>
+
+  <div class="command" *ngIf="commandList.length > 0">
+    <h3>Commands:</h3>
+    <ul>
+      <li *ngFor="let command of commandList">{{ command }}</li>
+    </ul>
+  </div>
+
+  <div class="result" *ngIf="reportOutput !== ''">
+    <h3>Output:</h3>
+    <p>{{ reportOutput }}</p>
+  </div>
+</div>
