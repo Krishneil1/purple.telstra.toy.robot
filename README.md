@@ -13,8 +13,9 @@ To run this solution, you need to have the following installed on your system:
 1. Clone the repository:
 
    ```shell
-   git clone <repository_url>
+   git clone https://github.com/Krishneil1/purple.telstra.toy.robot.git
    ```
+
 2. Change to the project directory
 3. Install dependencies
 
