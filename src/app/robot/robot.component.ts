@@ -13,28 +13,23 @@ enum Direction {
   styleUrls: ['./robot.component.scss']
 })
 export class RobotComponent {
-  commandInput: any = '';
-  reportOutput = '';
+  commandInput: string = '';
+  reportOutput: string = '';
   commandList: string[] = [];
 
-  private x = 0;
-  private y = 0;
+  private x: number = 0;
+  private y: number = 0;
   private direction!: Direction;
-  private isPlaced = false;
+  private isPlaced: boolean = false;
 
-  executeCommand() {
+  public executeCommand() {
     const commandParts = this.commandInput.split(' ');
     const action = commandParts[0];
     const parameters = commandParts[1]?.split(',');
 
     switch (action) {
       case 'PLACE':
-        if (parameters.length === 3) {
-          const x = Number(parameters[0]);
-          const y = Number(parameters[1]);
-          const direction = parameters[2] as Direction;
-          this.place(x, y, direction);
-        }
+        this.executePlaceCommand(parameters);
         break;
       case 'MOVE':
         this.move();
@@ -54,6 +49,15 @@ export class RobotComponent {
 
     this.commandList.push(this.commandInput);
     this.commandInput = '';
+  }
+
+  private executePlaceCommand(parameters: string[] | undefined) {
+    if (parameters?.length === 3) {
+      const x = Number(parameters[0]);
+      const y = Number(parameters[1]);
+      const direction = parameters[2] as Direction;
+      this.place(x, y, direction);
+    }
   }
 
   private place(x: number, y: number, direction: Direction) {
@@ -121,7 +125,8 @@ export class RobotComponent {
   private isValidPosition(x: number, y: number): boolean {
     return x >= 0 && x < 6 && y >= 0 && y < 6;
   }
-  reset() {
+
+  public reset() {
     this.commandInput = '';
     this.reportOutput = '';
     this.commandList = [];
