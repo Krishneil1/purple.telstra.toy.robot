@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NotificationService } from 'src/services/NotificationService';
 
 enum Direction {
   NORTH = 'NORTH',
@@ -22,6 +23,10 @@ export class RobotComponent {
   private direction!: Direction;
   private isPlaced: boolean = false;
 
+  constructor(
+    private notificationService: NotificationService
+    ) { }
+
   public executeCommand() {
     const commandParts = this.commandInput.split(' ');
     const action = commandParts[0];
@@ -44,7 +49,7 @@ export class RobotComponent {
         this.report();
         break;
       default:
-        console.log('Invalid command');
+        this.notificationService.openSnackBar('Invalid command');
     }
 
     this.commandList.push(this.commandInput);
