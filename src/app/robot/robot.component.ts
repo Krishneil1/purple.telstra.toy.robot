@@ -23,9 +23,7 @@ export class RobotComponent {
   private direction!: Direction;
   private isPlaced: boolean = false;
 
-  constructor(
-    private notificationService: NotificationService
-    ) { }
+  constructor(private notificationService: NotificationService) {}
 
   public executeCommand() {
     const commandParts = this.commandInput.split(' ');
@@ -103,21 +101,39 @@ export class RobotComponent {
 
   private rotateLeft() {
     if (this.isPlaced) {
-      const directions = Object.values(Direction);
-      const currentIndex = directions.indexOf(this.direction);
-      const newDirection =
-        currentIndex === 0 ? directions[directions.length - 1] : directions[currentIndex - 1];
-      this.direction = newDirection as Direction;
+      switch (this.direction) {
+        case Direction.NORTH:
+          this.direction = Direction.WEST;
+          break;
+        case Direction.SOUTH:
+          this.direction = Direction.EAST;
+          break;
+        case Direction.EAST:
+          this.direction = Direction.NORTH;
+          break;
+        case Direction.WEST:
+          this.direction = Direction.SOUTH;
+          break;
+      }
     }
   }
 
   private rotateRight() {
     if (this.isPlaced) {
-      const directions = Object.values(Direction);
-      const currentIndex = directions.indexOf(this.direction);
-      const newDirection =
-        currentIndex === directions.length - 1 ? directions[0] : directions[currentIndex + 1];
-      this.direction = newDirection as Direction;
+      switch (this.direction) {
+        case Direction.NORTH:
+          this.direction = Direction.EAST;
+          break;
+        case Direction.SOUTH:
+          this.direction = Direction.WEST;
+          break;
+        case Direction.EAST:
+          this.direction = Direction.SOUTH;
+          break;
+        case Direction.WEST:
+          this.direction = Direction.NORTH;
+          break;
+      }
     }
   }
 
