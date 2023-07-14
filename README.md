@@ -1,4 +1,8 @@
 # purple.telstra.toy.robot
+
+## Disclaimer
+
+I was not selected for interview with telstra purple but found this question online and solving this was a learning exercise.
 ## Getting Started
 
 ## Demo link
