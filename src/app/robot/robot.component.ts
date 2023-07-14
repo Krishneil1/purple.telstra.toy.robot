@@ -55,13 +55,17 @@ export class RobotComponent {
   }
 
   private executePlaceCommand(parameters: string[] | undefined) {
-    if (parameters?.length === 3) {
+    if (parameters && (parameters.length === 2 || parameters.length === 3)) {
       const x = Number(parameters[0]);
       const y = Number(parameters[1]);
-      const direction = parameters[2] as Direction;
-      this.place(x, y, direction);
+      const direction = parameters.length === 3 ? parameters[2] as Direction : this.direction;
+  
+      if (this.isValidPosition(x, y)) {
+        this.place(x, y, direction);
+      }
     }
   }
+  
 
   private place(x: number, y: number, direction: Direction) {
     if (this.isValidPosition(x, y)) {

@@ -1,6 +1,12 @@
 # purple.telstra.toy.robot
 ## Getting Started
 
+## Demo link
+https://gray-flower-0cbfda910.3.azurestaticapps.net/
+
+## Question link
+https://interviews.purple.telstra.com/development/
+
 ### Prerequisites
 
 To run this solution, you need to have the following installed on your system:
@@ -19,12 +25,12 @@ To run this solution, you need to have the following installed on your system:
 2. Change to the project directory
 3. Install dependencies
 
-  ```shell
+   ```shell
    npm install
    ```
 4. Start the application
 
-  ```shell
+   ```shell
    ng serve
    ```
 Implementation Purple Interview Toy Robot
