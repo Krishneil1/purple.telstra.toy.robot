@@ -17,10 +17,12 @@ To run this solution, you need to have the following installed on your system:
    ```
 2. Change to the project directory
 3. Install dependencies
+
   ```shell
    npm install
    ```
 4. Start the application
+
   ```shell
    ng serve
    ```
