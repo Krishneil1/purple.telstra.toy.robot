@@ -20,6 +20,11 @@
 }
 .commandInput{
   margin-top: 1rem;
+  width: 85%;
+  //put @media here for less than 500px
+  @media screen and (max-width: 500px) {
+    width:75% ;
+  }
 }
 .command {
   text-align: left;
@@ -32,7 +37,6 @@
   background-color: #f8f9fa;
   padding: 2rem;
   border-radius: 0.8rem;
-  width: 40rem;
   margin: 0 auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -49,7 +53,6 @@
 }
 
 .form-control {
-  width: 90%;
   padding: 1rem;
   border-radius: 0.3rem;
   border: 0.1rem solid #ced4da;
@@ -90,6 +93,7 @@
 .reset{
   width: 95%;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .execute{
   width: 95%;
