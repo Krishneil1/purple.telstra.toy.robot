@@ -5,6 +5,7 @@
   transform: translate(-50%);
   max-width: 40rem;
   margin: 0 auto;
+  min-width: 20rem;
   padding: 20px;
   text-align: center;
 }
@@ -23,7 +24,7 @@
   width: 85%;
   //put @media here for less than 500px
   @media screen and (max-width: 500px) {
-    width:75% ;
+    width:85% ;
   }
 }
 .command {
@@ -39,6 +40,7 @@
   border-radius: 0.8rem;
   margin: 0 auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
 }
 
 .heading {
