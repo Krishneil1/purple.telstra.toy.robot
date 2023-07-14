@@ -1,4 +1,29 @@
 # purple.telstra.toy.robot
+## Getting Started
+
+### Prerequisites
+
+To run this solution, you need to have the following installed on your system:
+
+- Node.js
+- npm (Node package manager)
+
+### Installation
+
+1. Clone the repository:
+
+   ```shell
+   git clone <repository_url>
+   ```
+2. Change to the project directory
+3. Install dependencies
+  ```shell
+   npm install
+   ```
+4. Start the application
+  ```shell
+   ng serve
+   ```
 Implementation Purple Interview Toy Robot
 Toy Robot
 Scenario
