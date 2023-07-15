@@ -26,6 +26,8 @@ export class RobotComponent {
   constructor(private notificationService: NotificationService) {}
 
   public executeCommand() {
+    //convert command to uppercase
+    this.commandInput = this.commandInput.toUpperCase();
     const commandParts = this.commandInput.split(' ');
     const action = commandParts[0];
     const parameters = commandParts[1]?.split(',');
