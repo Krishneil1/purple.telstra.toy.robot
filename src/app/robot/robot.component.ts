@@ -61,13 +61,13 @@ export class RobotComponent {
       const x = Number(parameters[0]);
       const y = Number(parameters[1]);
       const direction = parameters.length === 3 ? parameters[2] as Direction : this.direction;
-  
+
       if (this.isValidPosition(x, y)) {
         this.place(x, y, direction);
       }
     }
   }
-  
+
 
   private place(x: number, y: number, direction: Direction) {
     if (this.isValidPosition(x, y)) {
@@ -128,6 +128,7 @@ export class RobotComponent {
   private report() {
     if (this.isPlaced) {
       this.reportOutput = `${this.x},${this.y},${this.direction}`;
+      console.log(this.reportOutput);
     }
   }
 

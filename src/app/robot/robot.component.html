@@ -9,6 +9,19 @@
     <button class="btn btn-danger reset" (click)="reset()">Reset</button>
   </div>
 
+  <mat-card>
+    <mat-card-content class="card-output">
+      <h3>Example Input:</h3>
+      <p>1. PLACE 0,0,NORTH</p>
+      <p>2. MOVE</p>
+      <p>3. REPORT</p>
+    </mat-card-content>
+    <mat-card-content>
+      <h3>Expected Output:</h3>
+      <p>Output: 0,1,NORTH</p>
+    </mat-card-content>
+  </mat-card>
+
   <div class="command" *ngIf="commandList.length > 0">
     <h3>Commands:</h3>
     <ul>
@@ -16,11 +29,10 @@
     </ul>
   </div>
 
-  <div class="result" *ngIf="reportOutput !== ''">
-    <h3>Output:</h3>
-    <p>{{ reportOutput }}</p>
-  </div>
-  <div class="github-link">
-    <a href="https://github.com/Krishneil1/purple.telstra.toy.robot" target="_blank">Link to GitHub project</a>
-  </div>
+  <mat-card *ngIf="reportOutput !== ''">
+    <mat-card-content class="card-output">
+      <h3>Output:</h3>
+      <p>{{ reportOutput }}</p>
+    </mat-card-content>
+  </mat-card>
 </div>
